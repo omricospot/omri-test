@@ -5,15 +5,15 @@ public class internalConfig {
     /**
      * The name of the person
      */
-    public String name;
+    private String name;
 
     /**
      * The age of the person
      */
-    public Integer age;
+    private Integer age;
 
     /**
      * The name of work place
      */
-    public String work;
+    private String work;
 }
