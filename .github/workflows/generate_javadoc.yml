@@ -16,9 +16,9 @@ jobs:
        java-version: '17'
        cache: 'gradle'
     - run: ./gradlew build --no-daemon
-    - run: pwd
     - run:  javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
-    - run: cd javadocs
-    - run: pwd
-    - run: ls
+    - run: git add .
+    - run: git commit -m "generated javadoc for internal config"
+    - run: git push
+    
     
