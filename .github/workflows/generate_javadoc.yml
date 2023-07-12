@@ -16,4 +16,5 @@ jobs:
        java-version: '17'
        cache: 'gradle'
     - run: ./gradlew build --no-daemon
+    - run: pwd
     - run:  javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
