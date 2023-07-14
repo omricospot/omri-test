@@ -18,4 +18,6 @@ jobs:
     - run: ./gradlew build --no-daemon
     - run:  javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
     - run: git add .
+    - run:  git config --global user.email "omric@netapp.com"
+    - run: git config --global user.name "omricospot"
     - run: git commit -m 'commit'
