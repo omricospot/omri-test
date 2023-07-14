@@ -1,4 +1,4 @@
-name: Deploy Javadoc
+name: Create Javadoc
 
 on:
   push:
@@ -9,12 +9,12 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy JavaDoc 🚀
-        uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.INTERNAL_CONFIG_TOKEN }}
-          javadoc-branch: javadoc
-          java-version: 17
-          target-folder: javadoc 
-          project: gradle
-          custom-command: javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+       distribution: 'temurin'
+       java-version: '17'
+       cache: 'gradle'
+    - run: ./gradlew build --no-daemon
+    - run:  javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
+    - run: git add .
