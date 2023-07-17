@@ -15,6 +15,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.OMRI_SECRET }}
           javadoc-branch: javadoc
           java-version: 17
-          target-folder: javadoc 
           project: gradle
           custom-command: javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
