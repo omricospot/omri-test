@@ -21,7 +21,8 @@ jobs:
     - run:  javadoc -private -splitindex -d docs -subpackages ./src/main/java/org/example/models/*
     - run: git config --global user.email "omric@netapp.com"
     - run: git config --global user.name "omricospot"
-    - run: git commit -a -m 'commit'
+    - run: git add index.html
+    - run: git commit -m 'commit'
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
