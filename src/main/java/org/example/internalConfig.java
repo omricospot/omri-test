@@ -3,7 +3,7 @@ package org.example;
 public class internalConfig {
 
     /**
-     * The name of the person
+     * The name of the person 
      */
     private String name;
 
