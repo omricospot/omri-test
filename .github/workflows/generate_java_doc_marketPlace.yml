@@ -16,4 +16,4 @@ jobs:
           javadoc-branch: javadoc
           java-version: 17
           project: gradle
-          custom-command: javadoc -private -splitindex -d ./javadocs ./src/main/java/org/example/internalConfig.java
+          custom-command: javadoc -private -splitindex -d ./docs ./src/main/java/org/example/internalConfig.java
