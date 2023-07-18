@@ -17,8 +17,12 @@ jobs:
        cache: 'gradle'
     - run: ./gradlew build --no-daemon
     - run:  javadoc -private -splitindex -d docs ./src/main/java/org/example/internalConfig.java
-    - run: git add .
-    - run:  git config --global user.email "omric@netapp.com"
+    - run: git config --global user.email "omric@netapp.com"
     - run: git config --global user.name "omricospot"
-    - run: git commit -m 'commit'
-    - run: git push origin main
+    - run: git commit -a -m 'commit'
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+          github_token: ${{ secrets.INTERNAL_CONFIG_TOKEN }}
+          repository: main
+          force_with_lease: false
