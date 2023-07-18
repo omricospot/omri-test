@@ -15,10 +15,10 @@ jobs:
     - uses: actions/setup-java@v3
       with:
        distribution: 'temurin'
-       java-version: '17'
+       java-version: '8'
        cache: 'gradle'
     - run: ./gradlew build --no-daemon
-    - run:  javadoc -private -splitindex -d docs ./src/main/java/org/example/internalConfig.java
+    - run:  javadoc -private -splitindex -d docs ./src/main/java/org/example/models
     - run: git config --global user.email "omric@netapp.com"
     - run: git config --global user.name "omricospot"
     - run: git commit -a -m 'commit'
