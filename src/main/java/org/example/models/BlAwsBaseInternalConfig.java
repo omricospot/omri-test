@@ -51,7 +51,6 @@ public class BlAwsBaseInternalConfig {
     private Boolean                                         shouldEnforceMaxOnRecover;
     private Boolean                                         scaleUpByPricePerVCpu;
     private Boolean                                         scaleUpByAvailableIPs;
-    private BlMarketInterruptionProbabilityScoreConfig      marketInterruptionProbabilityScoreConfig;
     private BlInternalConfigLocalSpotBanMarketsTTL          localSpotBanMarketsTTL;
 
 }

@@ -39,7 +39,7 @@ public class AwsInstanceTypeDynamicEnum {
         }
 
         if (retVal == null) {
-            LOGGER.error("Tried to create Instance type enum for: " + name + ", but we don't support such type ");
+
         }
         return retVal;
     }
@@ -58,7 +58,6 @@ public class AwsInstanceTypeDynamicEnum {
             return name;
         }
 
-        @JsonIgnore
         public String getInstanceFamily() {
             int    dot    = name.indexOf(".");
             String family = name.substring(0, dot);
