@@ -8,4 +8,5 @@ public class BlAwsAccountInternalConfig extends BlAwsBaseInternalConfig{
     private ResourceScalingValueTypeEnum                    resourceScalingValueType;
     private Boolean                                         scaleUpByPricePerVCpu;
     private Boolean                                         scaleUpByAvailableIPs;
+    
 }
