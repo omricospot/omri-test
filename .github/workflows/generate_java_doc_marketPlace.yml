@@ -15,7 +15,7 @@ jobs:
     - uses: actions/setup-java@v3
       with:
        distribution: 'temurin'
-       java-version: '17'
+       java-version: '1.8.301'
        cache: 'gradle'
     - run: ./gradlew build --no-daemon
     - run:  javadoc -private -splitindex -d docs -subpackages ./src/main/java/org/example/models/*
