@@ -20,7 +20,8 @@ jobs:
     - run: ./gradlew build --no-daemon
     - run: rm -r docs
     - run: mkdir docs
-    - run: javadoc -private -d docs -subpackages ./src/main/java/org/example/models/*
+    - run: git commit -a -m 'delete files'
+    - run: javadoc -private -splitindex -d docs -subpackages ./src/main/java/org/example/models/*
     - run: git config --global user.email "omric@netapp.com"
     - run: git config --global user.name "omricospot"
     - run: git commit -a -m 'commit'
