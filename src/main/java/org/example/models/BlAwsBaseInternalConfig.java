@@ -53,4 +53,6 @@ public class BlAwsBaseInternalConfig {
     private Boolean                                         scaleUpByAvailableIPs;
     private BlInternalConfigLocalSpotBanMarketsTTL          localSpotBanMarketsTTL;
 
+    private Boolean newConfig;
+
 }
