@@ -18,9 +18,7 @@ jobs:
        java-version: '8'
        cache: 'gradle'
     - run: ./gradlew build --no-daemon
-    - run: rm docs/*
-    - run: rmdir docs/*
-    - run: rmdir docs
+    - run: rm -r docs
     - run: mkdir docs
     - run: javadoc -private -d docs -subpackages ./src/main/java/org/example/models/*
     - run: git config --global user.email "omric@netapp.com"
