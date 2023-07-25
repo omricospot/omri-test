@@ -24,7 +24,7 @@ jobs:
     - run: mkdir docs
     - run: git add .
     - run: git commit -m 'delete files'
-    - run: javadoc -private -splitindex -d docs -sourcepath ./src/main/java/org/example/models/configs ./src/main/java/org/example/models/base/*
+    - run: javadoc -private -splitindex -d docs ./src/main/java/org/example/models/*
     - run: git add .
     - run: git commit -m 'commit'
     - name: Push changes
