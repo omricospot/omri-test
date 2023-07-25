@@ -52,7 +52,5 @@ public class BlAwsBaseInternalConfig {
     private Boolean                                         scaleUpByPricePerVCpu;
     private Boolean                                         scaleUpByAvailableIPs;
     private BlInternalConfigLocalSpotBanMarketsTTL          localSpotBanMarketsTTL;
-
-    private Boolean newConfig;
-
+    private Integer theBestConfigEver;
 }
