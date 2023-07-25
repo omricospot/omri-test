@@ -22,9 +22,11 @@ jobs:
     - run: git config --global user.name "omricospot"
     - run: rm -r docs
     - run: mkdir docs
-    - run: git commit -a -m 'delete files'
+    - run: git add .
+    - run: git commit -m 'delete files'
     - run: javadoc -private -splitindex -d docs -subpackages ./src/main/java/org/example/models/*
-    - run: git commit -a -m 'commit'
+    - run: git add .
+    - run: git commit -m 'commit'
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
