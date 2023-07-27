@@ -12,6 +12,9 @@ public class BlAwsBaseInternalConfig {
      * hii shelly
      */
     private Boolean                    replaceEndangeredSpotInstances;
+    /**
+     * MLB
+     */
     private BlMlbInternalConfig        mlb;
     private BlGroupClusterModeConfig   clusterMode;
     private BlGroupHealthCheckConfig                        healthCheckConfig;
