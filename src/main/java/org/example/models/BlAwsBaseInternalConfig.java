@@ -16,6 +16,9 @@ public class BlAwsBaseInternalConfig {
      * MLB
      */
     private BlMlbInternalConfig        mlb;
+    /**
+     * clusterMode
+     */
     private BlGroupClusterModeConfig   clusterMode;
     private BlGroupHealthCheckConfig                        healthCheckConfig;
     private BlGroupEcsConfig                                ecs;
