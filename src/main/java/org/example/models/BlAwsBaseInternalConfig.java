@@ -8,6 +8,10 @@ public class BlAwsBaseInternalConfig {
      * The amount of backup AMI's to use
      */
     private Integer                                         amiBackupCount;
+    /**
+     * a new config
+     */
+    private Integer aNewConfig;
     private Boolean                    replaceEndangeredSpotInstances;
     private BlMlbInternalConfig        mlb;
     private BlGroupClusterModeConfig   clusterMode;
