@@ -8,17 +8,8 @@ public class BlAwsBaseInternalConfig {
      * The amount of backup AMI's to use
      */
     private Integer                                         amiBackupCount;
-    /**
-     * hii shelly
-     */
     private Boolean                    replaceEndangeredSpotInstances;
-    /**
-     * MLB
-     */
     private BlMlbInternalConfig        mlb;
-    /**
-     * clusterMode
-     */
     private BlGroupClusterModeConfig   clusterMode;
     private BlGroupHealthCheckConfig                        healthCheckConfig;
     private BlGroupEcsConfig                                ecs;
@@ -61,5 +52,9 @@ public class BlAwsBaseInternalConfig {
     private Boolean                                         scaleUpByPricePerVCpu;
     private Boolean                                         scaleUpByAvailableIPs;
     private BlInternalConfigLocalSpotBanMarketsTTL          localSpotBanMarketsTTL;
-    private Integer theBestConfigEver;
+
+    /**
+     * test internal config
+     */
+    private Integer test;
 }
