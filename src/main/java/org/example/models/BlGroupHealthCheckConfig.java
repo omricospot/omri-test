@@ -1,6 +1,5 @@
 package com.spot.common.aws.internalConfig.bl;
 
-import lombok.Data;
 import java.util.List;
 
 /**
@@ -10,7 +9,6 @@ import java.util.List;
  *  "excludedHealthChecksForInstanceHealthiness" [ELB, TARGET_GROUP]
  * }</pre>
  */
-@Data
 public class BlGroupHealthCheckConfig {
     //region Members
 
