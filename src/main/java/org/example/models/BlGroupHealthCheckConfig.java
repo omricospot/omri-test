@@ -1,4 +1,4 @@
-package com.spot.common.aws.internalConfig.bl;
+package org.example.models;
 
 import java.util.List;
 
