@@ -1,34 +1,29 @@
-package org.example.models;
+package com.spot.common.aws.internalConfig.bl;
 
+import lombok.Data;
 import java.util.List;
 
 /**
- * Created by talzur on 06/11/2016.
+ * <pre>example:
+ * {
+ *  "thresholdUnhealthyNotificationPercentage": 50,
+ *  "excludedHealthChecksForInstanceHealthiness" [ELB, TARGET_GROUP]
+ * }</pre>
  */
+@Data
 public class BlGroupHealthCheckConfig {
     //region Members
+
+    /**
+     * <pre>The threshold to consider the group as unhealthy.
+     *  default: 30
+     *  range: 0 - 100</pre>
+     */
     private Float                     thresholdUnhealthyNotificationPercentage;
+
+    /**
+     * HealthCheck types to exclude when checking the group healthiness.
+     */
     private List<HealthCheckTypeEnum> excludedHealthChecksForInstanceHealthiness;
-    //endregion
-
-    //region Getter and Setter methods
-
-    public List<HealthCheckTypeEnum> getExcludedHealthChecksForInstanceHealthiness() {
-        return excludedHealthChecksForInstanceHealthiness;
-    }
-
-    public void setExcludedHealthChecksForInstanceHealthiness(
-            List<HealthCheckTypeEnum> excludedHealthChecksForInstanceHealthiness) {
-        this.excludedHealthChecksForInstanceHealthiness = excludedHealthChecksForInstanceHealthiness;
-    }
-
-    public Float getThresholdUnhealthyNotificationPercentage() {
-        return thresholdUnhealthyNotificationPercentage;
-    }
-
-    public void setThresholdUnhealthyNotificationPercentage(Float thresholdUnhealthyNotificationPercentage) {
-        this.thresholdUnhealthyNotificationPercentage = thresholdUnhealthyNotificationPercentage;
-    }
-
     //endregion
 }
